@@ -20,6 +20,15 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.student.major, 'CIS')
         self.assertEqual(self.student.gpa, 0.0)
 
+    def test_student_str(self):
+        p = s.Student('Duck','Daisy','CIS',4.0)
+        self.assertEqual(str(p),"Duck, Daisy has major CIS with gpa: 4.0")
+
+    def test_object_not_created_error_last_name(self):
+        pass
+
+    def test_object_not_created_error_last_name(self):
+        pass
 
 
 if __name__ == '__main__':
