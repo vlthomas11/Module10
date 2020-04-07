@@ -24,10 +24,18 @@ class MyTestCase(unittest.TestCase):
         p = s.Student('Duck','Daisy','CIS',4.0)
         self.assertEqual(str(p),"Duck, Daisy has major CIS with gpa: 4.0")
 
-    def test_object_not_created_error_last_name(self):
-        pass
+    def test_object_not_created_error_first_name(self):
+        with self.assertRaises(ValueError):
+            p = s.Student('Duck','Da1sy','CIS')
 
     def test_object_not_created_error_last_name(self):
+        with self.assertRaises(ValueError):
+            p = s.Student('Duck', '123','CIS')
+
+    def test_object_not_created_error_major(self):
+        pass
+
+    def test_object_not_created_error_gpa(self):
         pass
 
 
